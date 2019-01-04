@@ -34,18 +34,21 @@ def androix_test_core_ktx = "androidx.test:core-ktx:${androidx_test_version}"
 def androix_test_runner = "androidx.test:runner:${androidx_test_version}"
 def androix_test_rules = "androidx.test:rules:${androidx_test_version}"
 def androix_espresso_core = "androidx.test.espresso:espresso-core:${androidx_espresso_version}"
+def androix_fragment = "androidx.fragment:fragment:${androidx_test_fragment_version}"
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
+    implementation androix_fragment
     testImplementation 'junit:junit:4.12'
     testImplementation 'androidx.test:runner:1.1.1'
     testImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
     testImplementation robolectric
     testImplementation androix_test_junit
+    testImplementation androix_fragment
     testImplementation androix_fragment_test
     testImplementation androix_test_core
     testImplementation androix_test_core_ktx
