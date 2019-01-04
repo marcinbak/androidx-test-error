@@ -15,7 +15,7 @@ import org.robolectric.annotation.Config
 
 
 @RunWith(AndroidJUnit4::class)
-@Config(sdk = [21], application = FragmentForTestTest.TestApp::class)
+@Config(sdk = [21], application = TestApp::class)
 class FragmentForTestTest {
 
     lateinit var fragment: FragmentForTest
@@ -39,10 +39,12 @@ class FragmentForTestTest {
     fun onCreateView() {
     }
 
-    class TestApp : Application() {
-        override fun onCreate() {
-            super.onCreate()
-            setTheme(R.style.AppTheme)
-        }
+
+}
+
+class TestApp : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        setTheme(R.style.AppTheme)
     }
 }
